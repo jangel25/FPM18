@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCocacolaNayMobiV2.Views.Inventarios.FicViConteoDetInventarioDetalle"
+             Title="Detalle">
+    <ScrollView>
+        <StackLayout
+        VerticalOptions="StartAndExpand"
+        Padding="20">
+            <Grid Padding="16">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="25*"/>
+                    <ColumnDefinition Width="25*"/>
+                    <ColumnDefinition Width="25*"/>
+                </Grid.ColumnDefinitions>
+                <!--ID-->
+                <Label Text="Id Inventario" Grid.Row="0" Grid.Column="0" VerticalOptions="Center"/>
+                <Label Grid.ColumnSpan="2" Text="{Binding Zt_inventario_conteos_detalle.IdInventario}" Grid.Row="0" Grid.Column="1"/>
+                <!--ALMACEN-->
+                <Label Text="SKU" Grid.Row="1" Grid.Column="0" VerticalOptions="Center"/>
+                <Label Grid.ColumnSpan="2" Text="{Binding Zt_inventario_conteos_detalle.SKU}" Grid.Row="1" Grid.Column="1"/>
+
+                <Label Text="Conteo" Grid.Row="2" Grid.Column="0" VerticalOptions="Center"/>
+                <Label Grid.ColumnSpan="2" Text="{Binding Zt_inventario_conteos_detalle.IdConteo}" Grid.Row="2" Grid.Column="1"/>
+
+                <Label Text="Ubicacion" Grid.Row="3" Grid.Column="0" VerticalOptions="Center"/>
+                <Label  Grid.ColumnSpan="2" Text="{Binding Zt_inventario_conteos_detalle.IdUbicacion}" Grid.Row="3" Grid.Column="1"/>
+
+                <Label Text="CEDI" Grid.Row="4" Grid.Column="0" VerticalOptions="Center"/>
+                <Label Grid.ColumnSpan="2" Text="{Binding Zt_inventario_conteos_detalle.IdCEDI}" Grid.Row="4" Grid.Column="1"/>
+
+                <Label Text="Almacen" Grid.Row="5" Grid.Column="0" VerticalOptions="Center"/>
+                <Label Grid.ColumnSpan="2" Text="{Binding Zt_inventario_conteos_detalle.IdAlmacen}" Grid.Row="5" Grid.Column="1"/>
+
+                <Label Text="Lote" Grid.Row="6" Grid.Column="0" VerticalOptions="Center"/>
+                <Label Grid.ColumnSpan="2" Text="{Binding Zt_inventario_conteos_detalle.Lote}" Grid.Row="6" Grid.Column="1"/>
+
+                <Label Text="Codigo de barras" Grid.Row="7" Grid.Column="0" VerticalOptions="Center"/>
+                <Label Grid.ColumnSpan="2" Text="{Binding Zt_inventario_conteos_detalle.CodBarras}" Grid.Row="7" Grid.Column="1"/>
+
+                <Label Text="Material" Grid.Row="8" Grid.Column="0" VerticalOptions="Center"/>
+                <Label Grid.ColumnSpan="2" Text="{Binding Zt_inventario_conteos_detalle.Material}" Grid.Row="8" Grid.Column="1"/>
+
+                <Label Text="Cantidad fisica" Grid.Row="9" Grid.Column="0" VerticalOptions="Center"/>
+                <Label Grid.ColumnSpan="2" Text="{Binding Zt_inventario_conteos_detalle.CantFisica}" Grid.Row="9" Grid.Column="1"/>
+
+                <Label Text="Unidad medida" Grid.Row="10" Grid.Column="0" VerticalOptions="Center"/>
+                <Label Grid.ColumnSpan="2" Text="{Binding Zt_inventario_conteos_detalle.IdUMedida}" Grid.Row="10" Grid.Column="1"/>
+
+                <Label Text="Piezas" Grid.Row="11" Grid.Column="0" VerticalOptions="Center"/>
+                <Label Grid.ColumnSpan="2" Text="{Binding Zt_inventario_conteos_detalle.CantidadPZA}" Grid.Row="11" Grid.Column="1"/>
+
+                <Label Text="Fecha registro" Grid.Row="12" Grid.Column="0" VerticalOptions="Center"/>
+                <Label Grid.ColumnSpan="2" Text="{Binding Zt_inventario_conteos_detalle.FechaReg}" Grid.Row="12" Grid.Column="1"/>
+
+                <Label Text="Hora registro" Grid.Row="13" Grid.Column="0" VerticalOptions="Center"/>
+                <Label Grid.ColumnSpan="2" Text="{Binding Zt_inventario_conteos_detalle.HoraReg}" Grid.Row="13" Grid.Column="1"/>
+
+                <Label Text="Usuario" Grid.Row="14" Grid.Column="0" VerticalOptions="Center"/>
+                <Label Grid.ColumnSpan="2" Text="{Binding Zt_inventario_conteos_detalle.UsuarioReg}" Grid.Row="14" Grid.Column="1"/>
+            </Grid>
+
+            <Grid Padding="16">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="25*"/>
+                    <ColumnDefinition Width="25*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btnEliminar" BackgroundColor="#F44336" TextColor="White" Text="Eliminar" Grid.Row="0" Grid.Column="0" VerticalOptions="Center"/>
+                <Button Text="Regresar" Command="{Binding CancelCommand}"  Grid.Row="0" Grid.Column="1" VerticalOptions="Center"/>
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

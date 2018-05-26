@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCocacolaNayMobiV2.Views.Inventarios.FicViCpInventariosDetItem">
+    <ScrollView>
+        <StackLayout
+            VerticalOptions="StartAndExpand"
+            Padding="20">
+
+            <Label Text="Id" />
+            <Entry Text="{Binding Item.Id}" IsEnabled="False"/>
+
+            <Label Text="Id Inventario" />
+            <Entry Text="{Binding Item.IdInventario}"/>
+
+            <Label Text="SKU" />
+            <Entry Text="{Binding Item.SKU}"/>
+
+            <Label Text="Material" />
+            <Entry Text="{Binding Item.Material}"/>
+
+            <Label Text="Cantidad Teorica" />
+            <Entry 
+                Text="{Binding Item.CantTeorica}"/>
+
+            <Label Text="Cantidad Física" />
+            <Entry 
+                Text="{Binding Item.CantFisica}"/>
+
+            <Label Text="Diferencia" />
+            <Entry 
+                Text="{Binding Item.Diferencia}"/>
+
+            <Label Text="Unidad de Medida" />
+            <Entry 
+                Text="{Binding Item.UMedida}"/>
+
+            <Label Text="Fecha Registro" />
+            <Entry 
+                Text="{Binding Item.FechaReg}"/>
+
+            <Label Text="Usuario Registro" />
+            <Entry 
+                Text="{Binding Item.UsuarioReg}"/>
+
+            <Label Text="Fecha ultima modificación"/>
+            <Entry 
+                Text="{Binding Item.FechaUltMod}"/>
+
+            <Label Text="Usuario moficó"/>
+            <Entry 
+                Text="{Binding Item.UsuarioMod}"/>
+
+            <Label Text="Activo"/>
+            <Entry
+                Text="{Binding Item.Activo}"/>
+
+            <Label Text="Borrado"/>
+            <Entry 
+                Text="{Binding Item.Borrado}"/>
+
+            <!--<Picker                
+                SelectedItem="{Binding SelectedCEDI}"
+                ItemsSource="{Binding FicMetItemsCEDIS}"
+                ItemDisplayBinding="{Binding CEDI}" />-->
+            
+            <Button Text="Guardar"  Command="{Binding FicMetSaveCommand}"/>
+            <Button Text="Cancelar" Command="{Binding FicMetCancelCommand}"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

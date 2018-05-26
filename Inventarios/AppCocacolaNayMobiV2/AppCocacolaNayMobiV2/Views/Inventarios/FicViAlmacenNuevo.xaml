@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCocacolaNayMobiV2.Views.Inventarios.FicViCpAlmacenItem"
+             Title="Nuevo Almacen">
+    <StackLayout
+        VerticalOptions="StartAndExpand"
+        Padding="20">
+
+        <Label Text="Id:" />
+        <Entry IsEnabled="False" Text="{Binding Item.Id}"/>
+
+        <Label Text="Id CEDI:" />
+        <Entry Text="{Binding Item.IdCEDI}"/>
+
+        <Label Text="Id Almacen:" />
+        <Entry Text="{Binding Item.IdAlmacen}"/>
+
+        <Label Text="Almacen:" />
+        <Entry Text="{Binding Item.Almacen}"/>
+
+        <Button Text="Guardar"  Command="{Binding FicMetSaveCommand}"/>
+        <!--Button Text="Eliminar" Command="{Binding FicMetDeleteCommand}"/-->
+        <Button Text="Cancelar" Command="{Binding FicMetCancelCommand}"/>
+    </StackLayout>
+</ContentPage>

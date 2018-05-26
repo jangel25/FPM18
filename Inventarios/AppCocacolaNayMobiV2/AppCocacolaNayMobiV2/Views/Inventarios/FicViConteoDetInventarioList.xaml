@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms"
+             x:Class="AppCocacolaNayMobiV2.Views.Inventarios.FicViConteoDetInventarioList"
+             Title="CONTEOS (INVENTARIOS)">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem 
+            Name="Agregar"
+            Command="{Binding AddCommand}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android, iOS" Value="plus" />
+                    <On Platform="UWP" Value="Assets/plus.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+
+        <ToolbarItem 
+            Name="Detalle"
+            Clicked="btnDetalle_Clicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android, iOS" Value="detalle" />
+                    <On Platform="UWP" Value="Assets/detalle.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+
+        <ToolbarItem 
+            Name="Editar"
+            Clicked="btnEditar_Clicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android, iOS" Value="editar" />
+                    <On Platform="UWP" Value="Assets/editar.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+
+        <ToolbarItem 
+            Name="Regresar"
+            Command="{Binding AddRegresarAcumulado}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android, iOS" Value="regresar" />
+                    <On Platform="UWP" Value="Assets/regresar.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+
+        <SearchBar x:Name="filterText"
+           Grid.Row="0"
+           Grid.Column="0"
+           IsVisible="true"
+           Placeholder="Buscar: ID, INVENTARIO, SKU O ALMACEN"
+           TextChanged="OnFilterTextChanged" />
+        <syncfusion:SfDataGrid     ColumnSizer="Star"
+                               AutoGenerateColumns="False"
+                               AllowSorting="False"
+                               ItemsSource="{Binding Zt_inventarios_conteos}"
+                               SelectedItem="{Binding SelectedZt_inventario_conteos, Mode=TwoWay}"
+                               SelectionMode="Single"
+                               x:Name="dataGrid">
+
+            <syncfusion:SfDataGrid.Columns x:TypeArguments="syncfusion:Columns"
+                                       >
+                <syncfusion:GridTextColumn HeaderText="ID" 
+                                   MappingName="Id" />
+
+                <syncfusion:GridTextColumn HeaderText="INVETARIO"
+                                   MappingName="IdInventario" />
+
+                <syncfusion:GridTextColumn HeaderText="SKU"
+                                   MappingName="SKU" />
+
+                <syncfusion:GridTextColumn HeaderText="CONTEO"
+                                   MappingName="IdConteo" />
+
+                <syncfusion:GridTextColumn HeaderText="UBICACION"
+                                   MappingName="IdUbicacion" />
+
+                <syncfusion:GridTextColumn HeaderText="ALMACEN"
+                                   MappingName="IdAlmacen" />
+
+                <syncfusion:GridTextColumn HeaderText="CANTIDAD FISICA"
+                                   MappingName="CantFisica" />
+
+                <syncfusion:GridTextColumn HeaderText="U. Medida"
+                                   MappingName="IdUMedida" />
+
+                <syncfusion:GridTextColumn HeaderText="PIEZAS"
+                                   MappingName="CantidadPZA" />
+
+            </syncfusion:SfDataGrid.Columns>
+
+            <syncfusion:SfDataGrid.SortColumnDescriptions>
+                <syncfusion:SortColumnDescription ColumnName="Id" />
+            </syncfusion:SfDataGrid.SortColumnDescriptions>
+
+        </syncfusion:SfDataGrid>
+    </StackLayout>
+</ContentPage>

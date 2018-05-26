@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCocacolaNayMobiV2.Views.Inventarios.FicViCpConteoInventarioItemInsert">
+    <ScrollView>
+        <StackLayout
+            VerticalOptions="StartAndExpand"
+            Padding="20">
+
+            <Label Text="Id" />
+            <Entry Text="{Binding Item.Id}" IsEnabled="False"/>
+
+            <Label Text="Id Inventario" />
+            <Entry Text="{Binding Item.IdInventario}"/>
+
+            <!--<Label Text="Id CEDI" />
+            <Entry Text="{Binding Item.IdCEDI}"/>-->
+
+            <Label Text="CEDI" />
+            <Picker               
+                ItemsSource="{Binding FicMetItemsCEDIS}"
+                SelectedItem="{Binding SelectedCEDI}"
+                ItemDisplayBinding="{Binding CEDI}" />
+
+            <Label Text="Hora" />
+            <Entry 
+                x:Name="horaActual"
+                IsEnabled="{Binding IsEnabledHora}"/>
+
+            <Label Text="Fecha Registro" />
+            <Entry 
+                x:Name="fechaActual"
+                IsEnabled="{Binding IsEnabledFechaReg}"/>
+            <!--<Switch
+                x:Name="Id CEDI"
+                IsToggled="{Binding Item.IdCEDI}"/>-->
+
+
+            <Button Text="Guardar"  Command="{Binding FicMetSaveCommand}"/>
+            <!--<Button Text="Eliminar" Command="{Binding FicMetDeleteCommand}"/>-->
+            <Button Text="Cancelar" Command="{Binding FicMetCancelCommand}"/>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCocacolaNayMobiV2.Views.Inventarios.FicViCpConteoInventarioList"
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+             Title="Lista de Inventarios">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem 
+            Name="zt_inventarios_det"
+            Command="{Binding FicMetDetCommand}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android, iOS" Value="ic_description"/>
+                    <On Platform="UWP" Value="Assets/ic_description.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+
+        <ToolbarItem 
+            Name="Conteos"
+            Command="{Binding FicMetConteosCommand}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android, iOS" Value="acumulado_conteo"/>
+                    <On Platform="UWP" Value="Assets/acumulado_conteo.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+
+        <ToolbarItem 
+            Name="Eliminar Inventario"
+            Command="{Binding FicMetDeleteCommand}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android, iOS" Value="ic_delete"/>
+                    <On Platform="UWP" Value="Assets/ic_delete.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem 
+            Name="Detalle Inventario"
+            Command="{Binding FicMetDetailsCommand}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android, iOS" Value="ic_details" />
+                    <On Platform="UWP" Value="Assets/ic_details.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem 
+            Name="Editar Inventario"
+            Command="{Binding FicMetEditCommand}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android, iOS" Value="ic_edit" />
+                    <On Platform="UWP" Value="Assets/ic_edit.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem 
+            Name="Nuevo Inventario"
+            Command="{Binding FicMetAddCommand}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android, iOS" Value="ic_add"/>
+                    <On Platform="UWP" Value="Assets/ic_add.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>        
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Grid
+            Padding="20,5,20,5"
+            BackgroundColor="Aqua"
+            HorizontalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <StackLayout
+                Grid.Row="0"
+                Padding="10,5,10,5"
+                Orientation="Horizontal"
+                VerticalOptions="StartAndExpand">
+                <SearchBar
+                    Placeholder="Buscar"
+                    PlaceholderColor="Red"
+                    HorizontalOptions="FillAndExpand"
+                    x:Name="FicSearchBar"
+                    SearchButtonPressed="FicSearchButtonPressed"
+                />
+                <!--SearchCommand="FicSearchCommand"
+                    SearchButtonPressed="FicSearchButtonPressed"
+                    SearchButtonPressed="{Binding FicSearchButtonPressed}"
+                    Text="{Binding FicFilter, Mode=TwoWay}"-->
+                <!--<Button
+                    Text="Buscar"/>-->
+            </StackLayout>
+            <!--HasUnevenRows="true"
+                IsPullToRefreshEnabled="true"
+                IsRefreshing="{Binding FicIsRefreshing, Mode=TwoWay}"
+                RefreshCommand="{Binding FicRefreshCommand}"-->
+            <ListView
+                Grid.Row="1"
+                Header=""
+                IsRefreshing="True"
+                x:Name="FicListView"
+                BackgroundColor="Azure"
+                VerticalOptions="FillAndExpand"
+                ItemsSource="{Binding FicMetZt_inventarios_Items}"
+                SelectedItem="{Binding FicMetZt_inventarios_SelectedItem, Mode=TwoWay}">
+                <ListView.HeaderTemplate>
+                    <DataTemplate>
+                        <Grid
+                            Padding="20,5,20,5"
+                            BackgroundColor="Aqua"
+                            HorizontalOptions="FillAndExpand">
+                            <Grid.ColumnDefinitions>
+                                <!--<ColumnDefinition Width="80*"/>-->
+                                <ColumnDefinition Width="165*"/>
+                                <ColumnDefinition Width="200*"/>
+                                <ColumnDefinition Width="240*"/>
+                                <ColumnDefinition Width="200*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackLayout
+                                Grid.Column="0"
+                                HorizontalOptions="CenterAndExpand">
+                                <Label
+                                    Text="Id"
+                                    VerticalTextAlignment="Center"
+                                    HorizontalOptions="CenterAndExpand"
+                                    FontAttributes="Bold"
+                                    FontSize="Micro"/>
+                                <Label
+                                    Text="Inventario"
+                                    VerticalTextAlignment="Center"
+                                    HorizontalOptions="CenterAndExpand"
+                                    FontAttributes="Bold"
+                                    FontSize="Micro"/>
+                            </StackLayout>
+                            <Label
+                                Grid.Column="1"
+                                Text="CEDI"
+                                VerticalTextAlignment="Center"
+                                HorizontalOptions="CenterAndExpand"
+                                FontAttributes="Bold"
+                                FontSize="Micro"/>
+                            <Label
+                                Grid.Column="2"
+                                Text="Fecha y hora"
+                                VerticalTextAlignment="Center"
+                                HorizontalOptions="CenterAndExpand"
+                                FontAttributes="Bold"
+                                FontSize="Micro"/>
+                            <Label
+                                Grid.Column="3"
+                                Text="Usuario Reg"
+                                VerticalTextAlignment="Center"
+                                HorizontalOptions="CenterAndExpand"
+                                FontAttributes="Bold"
+                                FontSize="Micro"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.HeaderTemplate>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout
+                                    Padding="20,5,20,5"
+                                    Orientation="Horizontal"
+                                    HorizontalOptions="FillAndExpand">
+                                    <!--<controls:Checkbox x:Name="cbHello" Checked="{Binding Path=My.Binding.Path, Converter={StaticResource StringToBoolean}, Mode=TwoWay}" />-->
+                                    <!--<Switch
+                                    IsToggled="False"
+                                    x:Name="select"
+                                    />-->
+                                    <!--<controls:CheckBox 
+                                    x:Name="check" 
+                                    Checked="False"/>-->
+                                    <!--<Label 
+                                    Text="{Binding Id}"
+                                    VerticalTextAlignment="Center"
+                                    HorizontalOptions="StartAndExpand" />-->
+                                    <Label 
+                                        Text="{Binding IdInventario}"
+                                        VerticalTextAlignment="Center"
+                                        HorizontalOptions="CenterAndExpand" />
+                                    <!--<Label 
+                                    Text="{Binding IdCEDI}"
+                                    VerticalTextAlignment="Center"
+                                    HorizontalOptions="StartAndExpand" />-->
+                                    <Label 
+                                        Text="{Binding IdCEDI}"
+                                        VerticalTextAlignment="Center"
+                                        HorizontalOptions="CenterAndExpand" />
+                                    <StackLayout
+                                        Orientation="Horizontal"
+                                        HorizontalOptions="CenterAndExpand">
+                                        <Label 
+                                            Text="{Binding FechaReg}"
+                                            VerticalTextAlignment="Center"
+                                            HorizontalOptions="EndAndExpand" />
+                                        <Label 
+                                            Text="{Binding Hora}"
+                                            VerticalTextAlignment="Center"
+                                            HorizontalOptions="StartAndExpand" />
+                                    </StackLayout>
+                                    <Label 
+                                        Text="{Binding UsuarioReg}"
+                                        VerticalTextAlignment="Center"
+                                        HorizontalOptions="CenterAndExpand" />
+                                    <!--Image 
+                                    HorizontalOptions="End"
+                                    IsVisible="{Binding Done}">
+                                    <Image.Source>
+                                        <OnPlatform x:TypeArguments="ImageSource">
+                                            <On Platform="Android, iOS" Value="check" />
+                                            <On Platform="UWP" Value="Assets/check.png" />
+                                        </OnPlatform>
+                                    </Image.Source>
+                                </Image-->
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </ContentPage.Content>
+
+</ContentPage>

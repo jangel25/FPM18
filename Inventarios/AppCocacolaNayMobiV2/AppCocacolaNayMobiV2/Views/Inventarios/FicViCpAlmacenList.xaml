@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCocacolaNayMobiV2.Views.Inventarios.FicViCpAlmacenList"
+             Title="Lista de Almacenes">
+    <ContentPage.ToolbarItems>
+
+        <ToolbarItem 
+            Name="Eliminar"
+            Command="{Binding ficMetDeleteCommand}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android, iOS" Value="delete.png" />
+                    <On Platform="UWP" Value="Assets/delete.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+
+        <ToolbarItem 
+            Name="Detalle"
+            Command="{Binding ficMetDetailCommand}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android, iOS" Value="detail.png" />
+                    <On Platform="UWP" Value="Assets/detail.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+
+        <ToolbarItem 
+            Name="Editar"
+            Command="{Binding ficMetEditCommand}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android, iOS" Value="edit.png" />
+                    <On Platform="UWP" Value="Assets/edit.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+
+        <ToolbarItem 
+            Name="Nuevo"
+            Command="{Binding ficMetAddCommand}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android, iOS" Value="plus.png" />
+                    <On Platform="UWP" Value="Assets/plus.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <StackLayout
+        Padding="20,0,20,0"
+        Orientation="Vertical"
+        HorizontalOptions="FillAndExpand">
+        <StackLayout
+            Orientation="Horizontal"
+            HorizontalOptions="FillAndExpand">
+            <Label 
+                Text="Id"
+                HorizontalOptions="StartAndExpand" />
+            <Label 
+                Text="IdCEDI"                    
+                HorizontalOptions="StartAndExpand" />
+            <Label 
+                Text="IdAlmacen"                    
+                HorizontalOptions="StartAndExpand" />
+            <Label 
+                Text="Almacen"
+                HorizontalOptions="StartAndExpand" />
+        </StackLayout>
+        <StackLayout
+            Orientation="Vertical"
+            HorizontalOptions="FillAndExpand">
+            <ListView
+                ItemsSource="{Binding FicMetZt_cat_almacenes_Items}"
+                SelectedItem="{Binding FicMetZt_cat_almacenes_SelectedItem, Mode=TwoWay}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout
+                            Padding="20,0,20,0"
+                            Orientation="Horizontal"
+                            HorizontalOptions="FillAndExpand">
+                                    <Label 
+                                Text="{Binding Id}"
+                                VerticalTextAlignment="Center"
+                                HorizontalOptions="StartAndExpand" />
+                                    <Label 
+                                Text="{Binding IdCEDI}"
+                                VerticalTextAlignment="Center"
+                                HorizontalOptions="StartAndExpand" />
+                                    <Label 
+                                Text="{Binding IdAlmacen}"
+                                VerticalTextAlignment="Center"
+                                HorizontalOptions="StartAndExpand" />
+                                    <Label 
+                                Text="{Binding Almacen}"
+                                VerticalTextAlignment="Center"
+                                HorizontalOptions="StartAndExpand" />
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

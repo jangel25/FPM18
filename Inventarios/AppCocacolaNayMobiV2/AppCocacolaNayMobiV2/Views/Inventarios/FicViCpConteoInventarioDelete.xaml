@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCocacolaNayMobiV2.Views.Inventarios.FicViCpConteoInventarioDelete">
+    <ScrollView>
+        <StackLayout
+            VerticalOptions="StartAndExpand"
+            Padding="20">
+            <Label
+                IsVisible="{Binding ActDelete}"
+                Text="¿Realmente desea eliminar el siguiente registro?"/>
+            <StackLayout
+                Orientation="Horizontal">
+                <Label Text="Id:" />
+                <Label Text="{Binding Item.Id}"/>
+            </StackLayout>
+            <StackLayout
+                Orientation="Horizontal">
+                <Label Text="Id Inventario: " />
+                <Label Text="{Binding Item.IdInventario}"/>
+            </StackLayout>
+            <StackLayout
+                Orientation="Horizontal">
+                <Label Text="Id CEDI: " />
+                <Label Text="{Binding Item.IdCEDI}"/>
+            </StackLayout>
+            <StackLayout
+                Orientation="Horizontal">
+                <Label Text="CEDI: " />
+                <Label Text="{Binding Item.CEDI}"/>
+            </StackLayout>
+            <StackLayout
+                Orientation="Horizontal">
+                <Label Text="Hora: " />
+                <Label Text="{Binding Item.Hora}"/>
+            </StackLayout>
+            <StackLayout
+                Orientation="Horizontal">
+                <Label Text="Fecha Registro: " />
+                <Label Text="{Binding Item.FechaReg}"/>
+            </StackLayout>
+            <StackLayout
+                Orientation="Horizontal">
+                <Label Text="Usuario registró: " />
+                <Label Text="{Binding Item.UsuarioReg}"/>
+            </StackLayout>
+            <StackLayout
+                Orientation="Horizontal">
+                <Label Text="Fecha ultima modificación: " />
+                <Label Text="{Binding Item.FechaUltMod}"/>
+            </StackLayout>
+            <StackLayout
+                Orientation="Horizontal">
+                <Label Text="Usuario modificó: " />
+                <Label Text="{Binding Item.UsuarioMod}"/>
+            </StackLayout>
+            <StackLayout
+                Orientation="Horizontal">
+                <Label Text="Activo: " />
+                <Label Text="{Binding Item.Activo}"/>
+            </StackLayout>
+            <StackLayout
+                Orientation="Horizontal">
+                <Label Text="Borrado: " />
+                <Label Text="{Binding Item.Borrado}"/>
+            </StackLayout>
+
+            
+            <Button Text="Eliminar" Command="{Binding FicMetDeleteCommand}" IsVisible="{Binding ActDelete}"/>
+            <Button Text="Cancelar" Command="{Binding FicMetCancelCommand}"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

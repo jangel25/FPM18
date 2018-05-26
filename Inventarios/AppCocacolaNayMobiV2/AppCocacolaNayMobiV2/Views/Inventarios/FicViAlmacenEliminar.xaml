@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCocacolaNayMobiV2.Views.Inventarios.FicViAlmacenEliminar"
+             Title="Eliminar Almacen">
+    <StackLayout
+        VerticalOptions="StartAndExpand"
+        Padding="20">
+
+        <Label Text="¿Estas seguro de eliminar el siguiente registro?"/>
+
+        <Label Text="{Binding Item.Id, StringFormat='Id: {0}'}"/>
+        <Label Text="{Binding Item.IdCEDI, StringFormat='Id CEDI: {0}'}"/>
+        <Label Text="{Binding Item.IdAlmacen, StringFormat='Id Almacen: {0}'}"/>
+        <Label Text="{Binding Item.Almacen, StringFormat='Almacen: {0}'}"/>
+
+        <Button Text="Eliminar" Command="{Binding FicMetDeleteCommand}"/>
+        <Button Text="Cancelar" Command="{Binding FicMetCancelCommand}"/>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCocacolaNayMobiV2.Views.Inventarios.FicViConteoDetInventarioItem"
+             xmlns:vm="clr-namespace:AppCocacolaNayMobiV2.ViewModels;"
+             xmlns:numeric="clr-namespace:Syncfusion.SfNumericUpDown.XForms;assembly=Syncfusion.SfNumericUpDown.XForms"
+             Title="Nuevo conteo">
+
+    <ScrollView>
+        <StackLayout
+        VerticalOptions="StartAndExpand"
+        Padding="20">
+            <Label Text="Id Inventario" />
+            <Entry Text="{Binding Zt_inventario_conteos.IdInventario}" x:Name="txtIdInventario"/>
+
+            <Label Text="CEDI" />
+            <Entry Text="{Binding Zt_inventario_conteos.IdCEDI}" x:Name="txtCEDI"/>
+
+            <Label Text="Conteo" />
+            <Entry Text="{Binding Zt_inventario_conteos.Id}" x:Name="txtIdConteo"/>
+
+            <Label Text="Codigo de barras" />
+            <StackLayout Orientation="Horizontal">
+                <Entry x:Name="txtBarra" Text="{Binding Zt_inventario_conteos.CodBarras}" HorizontalOptions="FillAndExpand"/>
+                <Button Text="Escanear" x:Name="btnBarras" HorizontalOptions="End"/>
+            </StackLayout>
+
+            <Label Text="SKU" />
+            <Entry Text="{Binding Zt_inventario_conteos.SKU}" x:Name="txtSKU"/>
+
+            <Label Text="Material" x:Name="txtMaterial"/>
+            <Entry Text="{Binding Zt_inventario_conteos.Material}"/>
+
+            <Label Text="Cantidad fisica" />
+            <numeric:SfNumericUpDown MaximumDecimalDigits="0" Minimum="0" Value="{Binding Zt_inventario_conteos.CantFisica}"/>
+
+            <Label Text="Unidad medida"/>
+            <Picker SelectedItem="{Binding Zt_inventario_conteos.IdUMedida}">
+                <Picker.Items>
+                    <x:String>Cajas</x:String>
+                    <x:String>Piezas</x:String>
+                    <x:String>Six pack</x:String>
+                    <x:String>Docena</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label Text="Ubicacion" />
+            <Entry Text="{Binding Zt_inventario_conteos.IdUbicacion}"/>
+
+            <Label Text="Almacen" />
+            <Entry Text="{Binding Zt_inventario_conteos.IdAlmacen}"/>
+
+            <Label Text="Lote" />
+            <Entry Text="{Binding Zt_inventario_conteos.Lote}"/>
+
+            <Label Text="Piezas" />
+            <Entry Text="{Binding Zt_inventario_conteos.CantidadPZA}" x:Name="txtCantidadPZA"/>
+
+
+            <Label Text="Fecha creación: " />
+
+            <Grid Padding="16">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="25*"/>
+                    <ColumnDefinition Width="25*"/>
+                    <ColumnDefinition Width="25*"/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="lblFecha" Text="{Binding Zt_inventario_conteos.FechaReg}" Grid.Row="0" Grid.Column="0" VerticalOptions="Center"/>
+                <Label x:Name="lblHora" Text="{Binding Zt_inventario_conteos.HoraReg}"  Grid.Row="0" Grid.Column="1" VerticalOptions="Center"/>
+                <Label x:Name="lblUsuario" Text="{Binding Zt_inventario_conteos.UsuarioReg}"  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
+            </Grid>
+            <Button Text="Guardar"  Command="{Binding SaveCommand}"/>
+            <Button Text="Cancelar" Command="{Binding CancelCommand}"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

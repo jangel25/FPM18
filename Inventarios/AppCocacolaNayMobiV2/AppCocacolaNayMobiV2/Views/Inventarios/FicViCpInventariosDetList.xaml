@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCocacolaNayMobiV2.Views.Inventarios.FicViCpInventariosDetList"
+             Title="Detalles de inventario">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem 
+            Name="zt_inventarios_conteos"
+            Command="{Binding FicMetConteosCommand}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android, iOS" Value="ic_description"/>
+                    <On Platform="UWP" Value="Assets/ic_description.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem 
+            Name="Eliminar Detalle"
+            Command="{Binding FicMetDeleteCommand}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android, iOS" Value="ic_delete"/>
+                    <On Platform="UWP" Value="Assets/ic_delete.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem 
+            Name="Ver Detalle"
+            Command="{Binding FicMetDetailsCommand}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android, iOS" Value="ic_details" />
+                    <On Platform="UWP" Value="Assets/ic_details.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem 
+            Name="Editar Detalle"
+            Command="{Binding FicMetEditCommand}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android, iOS" Value="ic_edit" />
+                    <On Platform="UWP" Value="Assets/ic_edit.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem 
+            Name="Nuevo Detalle"
+            Command="{Binding FicMetAddCommand}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android, iOS" Value="ic_add"/>
+                    <On Platform="UWP" Value="Assets/ic_add.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Grid
+            Padding="20,5,20,5"
+            BackgroundColor="Aqua"
+            HorizontalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <StackLayout
+                Grid.Row="0"
+                Padding="10,5,10,5"
+                Orientation="Horizontal"
+                VerticalOptions="StartAndExpand">
+                <SearchBar
+                    Placeholder="Buscar"
+                    PlaceholderColor="Red"
+                    HorizontalOptions="FillAndExpand"
+                    x:Name="FicSearchBar"
+                    SearchButtonPressed="FicSearchButtonPressed"
+                />
+                <!--<Button
+                    Text="Buscar"/>-->
+            </StackLayout>
+            <ListView
+                Grid.Row="1"
+                Header=""
+                IsRefreshing="True"
+                x:Name="FicListView"
+                BackgroundColor="Azure"
+                VerticalOptions="FillAndExpand"
+                ItemsSource="{Binding FicMetZt_inventarios_det_Items}"
+                SelectedItem="{Binding FicMetZt_inventarios_det_SelectedItem, Mode=TwoWay}">
+                <ListView.HeaderTemplate>
+                    <DataTemplate>
+                        <Grid
+                            Padding="20,5,20,5"
+                            BackgroundColor="Aqua"
+                            HorizontalOptions="FillAndExpand">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="200*"/>
+                                <ColumnDefinition Width="200*"/>
+                                <ColumnDefinition Width="200*"/>
+                                <ColumnDefinition Width="200*"/>
+                                <ColumnDefinition Width="200*"/>
+                                <ColumnDefinition Width="200*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackLayout
+                                Grid.Column="0"
+                                HorizontalOptions="CenterAndExpand">
+                                <Label
+                                    Text="Id"
+                                    VerticalTextAlignment="Center"
+                                    HorizontalOptions="CenterAndExpand"
+                                    FontAttributes="Bold"
+                                    FontSize="Micro"/>
+                                <Label
+                                    Text="Inventario"
+                                    VerticalTextAlignment="Center"
+                                    HorizontalOptions="CenterAndExpand"
+                                    FontAttributes="Bold"
+                                    FontSize="Micro"/>
+                            </StackLayout>
+                            <Label
+                                Grid.Column="1"
+                                Text="SKU"
+                                VerticalTextAlignment="Center"
+                                HorizontalOptions="CenterAndExpand"
+                                FontAttributes="Bold"
+                                FontSize="Micro"/>
+                            <Label
+                                Grid.Column="2"
+                                Text="Material"
+                                VerticalTextAlignment="Center"
+                                HorizontalOptions="CenterAndExpand"
+                                FontAttributes="Bold"
+                                FontSize="Micro"/>
+                            <Label
+                                Grid.Column="3"
+                                Text="Cant Teorica"
+                                VerticalTextAlignment="Center"
+                                HorizontalOptions="CenterAndExpand"
+                                FontAttributes="Bold"
+                                FontSize="Micro"/>
+                            <Label
+                                Grid.Column="4"
+                                Text="Cant Física"
+                                VerticalTextAlignment="Center"
+                                HorizontalOptions="CenterAndExpand"
+                                FontAttributes="Bold"
+                                FontSize="Micro"/>
+                            <Label
+                                Grid.Column="5"
+                                Text="Unidad Medida"
+                                VerticalTextAlignment="Center"
+                                HorizontalOptions="CenterAndExpand"
+                                FontAttributes="Bold"
+                                FontSize="Micro"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.HeaderTemplate>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout
+                                    Padding="20,5,20,5"
+                                    Orientation="Horizontal"
+                                    HorizontalOptions="FillAndExpand">
+                                    <!--<Switch
+                                    IsToggled="False"
+                                    x:Name="select"
+                                    />-->
+                                    <!--<controls:CheckBox 
+                                    x:Name="check" 
+                                    Checked="False"/>-->
+                                    <!--<Label 
+                                    Text="{Binding Id}"
+                                    VerticalTextAlignment="Center"
+                                    HorizontalOptions="StartAndExpand" />-->
+                                    <Label 
+                                        Text="{Binding IdInventario}"
+                                        VerticalTextAlignment="Center"
+                                        HorizontalOptions="CenterAndExpand" />
+                                    <Label 
+                                        Text="{Binding SKU}"
+                                        VerticalTextAlignment="Center"
+                                        HorizontalOptions="CenterAndExpand" />
+                                    <Label 
+                                        Text="{Binding Material}"
+                                        VerticalTextAlignment="Center"
+                                        HorizontalOptions="CenterAndExpand" />
+                                    <Label 
+                                        Text="{Binding CantTeorica}"
+                                        VerticalTextAlignment="Center"
+                                        HorizontalOptions="CenterAndExpand" />
+                                    <Label 
+                                        Text="{Binding CantFisica}"
+                                        VerticalTextAlignment="Center"
+                                        HorizontalOptions="CenterAndExpand" />
+                                    <Label 
+                                        Text="{Binding UMedida}"
+                                        VerticalTextAlignment="Center"
+                                        HorizontalOptions="CenterAndExpand" />
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
