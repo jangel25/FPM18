@@ -655,11 +655,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Multiplataforma\\proyectoFinal\\proyectoFinal\\proyectoFinal.Android\\proyectoFinal.Android.csproj",
+      "projectUniqueName": "D:\\Multiplataforma\\FPM18\\proyectoFinal\\proyectoFinal.Android\\proyectoFinal.Android.csproj",
       "projectName": "proyectoFinal.Android",
-      "projectPath": "D:\\Multiplataforma\\proyectoFinal\\proyectoFinal\\proyectoFinal.Android\\proyectoFinal.Android.csproj",
+      "projectPath": "D:\\Multiplataforma\\FPM18\\proyectoFinal\\proyectoFinal.Android\\proyectoFinal.Android.csproj",
       "packagesPath": "C:\\Users\\Angel\\.nuget\\packages\\",
-      "outputPath": "D:\\Multiplataforma\\proyectoFinal\\proyectoFinal\\proyectoFinal.Android\\obj\\",
+      "outputPath": "D:\\Multiplataforma\\FPM18\\proyectoFinal\\proyectoFinal.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [

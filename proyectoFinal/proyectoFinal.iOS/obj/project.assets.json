@@ -663,11 +663,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Multiplataforma\\proyectoFinal\\proyectoFinal\\proyectoFinal.iOS\\proyectoFinal.iOS.csproj",
+      "projectUniqueName": "D:\\Multiplataforma\\FPM18\\proyectoFinal\\proyectoFinal.iOS\\proyectoFinal.iOS.csproj",
       "projectName": "proyectoFinal.iOS",
-      "projectPath": "D:\\Multiplataforma\\proyectoFinal\\proyectoFinal\\proyectoFinal.iOS\\proyectoFinal.iOS.csproj",
+      "projectPath": "D:\\Multiplataforma\\FPM18\\proyectoFinal\\proyectoFinal.iOS\\proyectoFinal.iOS.csproj",
       "packagesPath": "C:\\Users\\Angel\\.nuget\\packages\\",
-      "outputPath": "D:\\Multiplataforma\\proyectoFinal\\proyectoFinal\\proyectoFinal.iOS\\obj\\",
+      "outputPath": "D:\\Multiplataforma\\FPM18\\proyectoFinal\\proyectoFinal.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
