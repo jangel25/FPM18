@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCocacolaNayMobiV2.Views.Planeaciones.ViEvaPlaneacionDetalle"
+             Title="Detalle">
+    <ScrollView>
+        <StackLayout
+        VerticalOptions="StartAndExpand"
+        Padding="20">
+            <Grid Padding="16">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="25*"/>
+                    <ColumnDefinition Width="25*"/>
+                    <ColumnDefinition Width="25*"/>
+                </Grid.ColumnDefinitions>
+                <!--ID-->
+                <Label Text="Referencia norma" Grid.Row="0" Grid.Column="0" VerticalOptions="Center"/>
+                <Label Grid.ColumnSpan="2" Text="{Binding eva_planeacion.ReferenciaNorma}" Grid.Row="0" Grid.Column="1"/>
+                <!--ALMACEN-->
+                <Label Text="Revision" Grid.Row="1" Grid.Column="0" VerticalOptions="Center"/>
+                <Label Grid.ColumnSpan="2" Text="{Binding eva_planeacion.Revision}" Grid.Row="1" Grid.Column="1"/>
+
+                <Label Text="Actual" Grid.Row="2" Grid.Column="0" VerticalOptions="Center"/>
+                <Label Grid.ColumnSpan="2" Text="{Binding eva_planeacion.Actual}" Grid.Row="2" Grid.Column="1"/>
+
+                <Label Text="Competencia" Grid.Row="3" Grid.Column="0" VerticalOptions="Center"/>
+                <Label  Grid.ColumnSpan="2" Text="{Binding eva_planeacion.CompetenciaAsignatura}" Grid.Row="3" Grid.Column="1"/>
+
+                <Label Text="Aportacion al P. E." Grid.Row="4" Grid.Column="0" VerticalOptions="Center"/>
+                <Label Grid.ColumnSpan="2" Text="{Binding eva_planeacion.AportacionPerfilEgreso}" Grid.Row="4" Grid.Column="1"/>
+            </Grid>
+
+            <Grid Padding="16">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="25*"/>
+                    <ColumnDefinition Width="25*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btnEliminar" BackgroundColor="Coral" TextColor="White" Text="Eliminar" Grid.Row="0" Grid.Column="0" VerticalOptions="Center"/>
+                <Button Text="Regresar" Command="{Binding CancelCommand}"  Grid.Row="0" Grid.Column="1" VerticalOptions="Center"/>
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

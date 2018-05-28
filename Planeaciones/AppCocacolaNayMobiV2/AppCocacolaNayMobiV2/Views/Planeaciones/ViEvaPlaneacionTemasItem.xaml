@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCocacolaNayMobiV2.Views.Planeaciones.ViEvaPlaneacionTemasItem"
+             xmlns:vm="clr-namespace:AppCocacolaNayMobiV2.ViewModels.Planeaciones;"
+             xmlns:numeric="clr-namespace:Syncfusion.SfNumericUpDown.XForms;assembly=Syncfusion.SfNumericUpDown.XForms"
+             Title="Nuevo tema">
+
+    <ScrollView>
+        <StackLayout
+        VerticalOptions="StartAndExpand"
+        Padding="20">
+            <Label x:Name="lblPlaneacion"/>
+
+            <Label Text="Descripcion del tema" />
+            <Entry Text="{Binding eva_planeacion_temas_item.DesTema}" x:Name="txtReferenciaNorma"/>
+
+            <Label Text="Observaciones" />
+            <Entry Text="{Binding eva_planeacion_temas_item.Observaciones}" x:Name="txtRevision"/>
+
+            <Button Text="Guardar"  Command="{Binding SaveCommand}"/>
+            <Button Text="Cancelar" Command="{Binding CancelCommand}"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

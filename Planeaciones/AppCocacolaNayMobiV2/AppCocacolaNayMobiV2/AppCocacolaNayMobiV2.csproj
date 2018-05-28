@@ -1,0 +1,128 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.4</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.8.0" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.5.166-beta" />
+    <PackageReference Include="Syncfusion.Xamarin.SfDataGrid" Version="16.1.0.37" />
+    <PackageReference Include="Syncfusion.Xamarin.SfNumericUpDown" Version="16.1.0.37" />
+    <PackageReference Include="Xamarin.Forms" Version="2.5.0.280555" />
+    <PackageReference Include="ZXing.Net.Mobile" Version="2.4.1" />
+    <PackageReference Include="ZXing.Net.Mobile.Forms" Version="2.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\Menu\AboutPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Menu\ItemDetailPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Menu\ItemsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Menu\MainPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Menu\NewItemPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Planeaciones\ViEvaCatApoyosDetalle.xaml.cs">
+      <DependentUpon>ViEvaCatApoyosDetalle.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Planeaciones\ViEvaCatFuentesDetalle.xaml.cs">
+      <DependentUpon>ViEvaCatFuentesDetalle.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Planeaciones\ViEvaCatApoyosItem.xaml.cs">
+      <DependentUpon>ViEvaCatApoyosItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Planeaciones\ViEvaCatFuentesItem.xaml.cs">
+      <DependentUpon>ViEvaCatFuentesItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Planeaciones\ViEvaCatApoyosList.xaml.cs">
+      <DependentUpon>ViEvaCatApoyosList.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Planeaciones\ViEvaCatFuentesList.xaml.cs">
+      <DependentUpon>ViEvaCatFuentesList.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Planeaciones\ViEvaPlanSubtemasDetalle.xaml.cs">
+      <DependentUpon>ViEvaPlanSubtemasDetalle.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Planeaciones\ViEvaPlaneacionTemasDetalle.xaml.cs">
+      <DependentUpon>ViEvaPlaneacionTemasDetalle.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Planeaciones\ViEvaPlaneacionDetalle.xaml.cs">
+      <DependentUpon>ViEvaPlaneacionDetalle.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Planeaciones\ViEvaPlanSubtemasItem.xaml.cs">
+      <DependentUpon>ViEvaPlanSubtemasItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Planeaciones\ViEvaPlaneacionTemasItem.xaml.cs">
+      <DependentUpon>ViEvaPlaneacionTemasItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Planeaciones\ViEvaPlaneacionItem.xaml.cs">
+      <DependentUpon>ViEvaPlaneacionItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Planeaciones\ViEvaPlanSubtemasList.xaml.cs">
+      <DependentUpon>ViEvaPlanSubtemasList.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Planeaciones\ViEvaPlaneacionTemasList.xaml.cs">
+      <DependentUpon>ViEvaPlaneacionTemasList.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Planeaciones\ViEvaPlaneacionList.xaml.cs">
+      <DependentUpon>ViEvaPlaneacionList.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\Planeaciones\ViEvaCatApoyosDetalle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Planeaciones\ViEvaCatFuentesDetalle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Planeaciones\ViEvaCatApoyosItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Planeaciones\ViEvaCatFuentesItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Planeaciones\ViEvaCatApoyosList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Planeaciones\ViEvaCatFuentesList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Planeaciones\ViEvaPlanSubtemasDetalle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Planeaciones\ViEvaPlaneacionTemasDetalle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Planeaciones\ViEvaPlaneacionDetalle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Planeaciones\ViEvaPlanSubtemasItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Planeaciones\ViEvaPlaneacionTemasItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Planeaciones\ViEvaPlaneacionItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Planeaciones\ViEvaPlanSubtemasList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Planeaciones\ViEvaPlaneacionTemasList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Planeaciones\ViEvaPlaneacionList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

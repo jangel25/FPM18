@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCocacolaNayMobiV2.Views.Planeaciones.ViEvaPlaneacionItem"
+             xmlns:vm="clr-namespace:AppCocacolaNayMobiV2.ViewModels;"
+             xmlns:numeric="clr-namespace:Syncfusion.SfNumericUpDown.XForms;assembly=Syncfusion.SfNumericUpDown.XForms"
+             Title="Nuevo conteo">
+
+    <ScrollView>
+        <StackLayout
+        VerticalOptions="StartAndExpand"
+        Padding="20">
+            <Label Text="Referencia norma" />
+            <Entry Text="{Binding eva_planeacion_item.ReferenciaNorma}" x:Name="txtReferenciaNorma"/>
+
+            <Label Text="Revision" />
+            <Entry Text="{Binding eva_planeacion_item.Revision}" x:Name="txtRevision"/>
+
+            <Label Text="Actual" />
+            <Entry Text="{Binding eva_planeacion_item.Actual}" x:Name="txtActual"/>
+
+            <Label Text="Competencia de la asignatura"/>
+            <Entry Text="{Binding eva_planeacion_item.CompetenciaAsignatura}" x:Name="txtCompetencia"/>
+
+            <Label Text="Aportación al perfil de egreso" />
+            <Entry Text="{Binding eva_planeacion_item.AportacionPerfilEgreso}"/>
+
+            <Button Text="Guardar"  Command="{Binding SaveCommand}"/>
+            <Button Text="Cancelar" Command="{Binding CancelCommand}"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

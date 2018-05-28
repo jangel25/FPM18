@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCocacolaNayMobiV2.Views.Planeaciones.ViEvaCatApoyosItem"
+             xmlns:vm="clr-namespace:AppCocacolaNayMobiV2.ViewModels;"
+             xmlns:numeric="clr-namespace:Syncfusion.SfNumericUpDown.XForms;assembly=Syncfusion.SfNumericUpDown.XForms"
+             Title="Nuevo apoyo">
+
+    <ScrollView>
+        <StackLayout
+        VerticalOptions="StartAndExpand"
+        Padding="20">
+            <Label x:Name="lblPlaneacion"/>
+            <Label Text="Descripcion" />
+            <Entry Text="{Binding eva_cat_apoyos_item.DesApoyoDidactico}" x:Name="txtReferenciaNorma"/>
+
+            <Label Text="Activo" />
+            <Entry Text="{Binding eva_cat_apoyos_item.Activo}" x:Name="txtRevision"/>
+
+            <Label Text="Fecha de registro"/>
+            <Label x:Name="lblFecha"/>
+
+            <Button Text="Guardar"  Command="{Binding SaveCommand}"/>
+            <Button Text="Cancelar" Command="{Binding CancelCommand}"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
