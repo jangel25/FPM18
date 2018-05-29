@@ -6281,24 +6281,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\titab\\.nuget\\packages\\": {},
+    "C:\\Users\\LuzAlejandra\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\titab\\Documents\\ProyectoBarajas\\AppCocacolaNayMobiV2\\AppCocacolaNayMobiV2.iOS\\AppCocacolaNayMobiV2.iOS.csproj",
+      "projectUniqueName": "C:\\MULTIPLATAFORMA\\FPM18\\Inventarios\\AppCocacolaNayMobiV2\\AppCocacolaNayMobiV2.iOS\\AppCocacolaNayMobiV2.iOS.csproj",
       "projectName": "AppCocacolaNayMobiV2.iOS",
-      "projectPath": "C:\\Users\\titab\\Documents\\ProyectoBarajas\\AppCocacolaNayMobiV2\\AppCocacolaNayMobiV2.iOS\\AppCocacolaNayMobiV2.iOS.csproj",
-      "packagesPath": "C:\\Users\\titab\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\titab\\Documents\\ProyectoBarajas\\AppCocacolaNayMobiV2\\AppCocacolaNayMobiV2.iOS\\obj\\",
+      "projectPath": "C:\\MULTIPLATAFORMA\\FPM18\\Inventarios\\AppCocacolaNayMobiV2\\AppCocacolaNayMobiV2.iOS\\AppCocacolaNayMobiV2.iOS.csproj",
+      "packagesPath": "C:\\Users\\LuzAlejandra\\.nuget\\packages\\",
+      "outputPath": "C:\\MULTIPLATAFORMA\\FPM18\\Inventarios\\AppCocacolaNayMobiV2\\AppCocacolaNayMobiV2.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\titab\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\LuzAlejandra\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
@@ -6312,8 +6312,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\titab\\Documents\\ProyectoBarajas\\AppCocacolaNayMobiV2\\AppCocacolaNayMobiV2\\AppCocacolaNayMobiV2.csproj": {
-              "projectPath": "C:\\Users\\titab\\Documents\\ProyectoBarajas\\AppCocacolaNayMobiV2\\AppCocacolaNayMobiV2\\AppCocacolaNayMobiV2.csproj"
+            "C:\\MULTIPLATAFORMA\\FPM18\\Inventarios\\AppCocacolaNayMobiV2\\AppCocacolaNayMobiV2\\AppCocacolaNayMobiV2.csproj": {
+              "projectPath": "C:\\MULTIPLATAFORMA\\FPM18\\Inventarios\\AppCocacolaNayMobiV2\\AppCocacolaNayMobiV2\\AppCocacolaNayMobiV2.csproj"
             }
           }
         }
