@@ -4,7 +4,7 @@
              x:Class="AppCocacolaNayMobiV2.Views.Planeaciones.ViEvaPlaneacionItem"
              xmlns:vm="clr-namespace:AppCocacolaNayMobiV2.ViewModels;"
              xmlns:numeric="clr-namespace:Syncfusion.SfNumericUpDown.XForms;assembly=Syncfusion.SfNumericUpDown.XForms"
-             Title="Nuevo conteo">
+             Title="Nueva planeacion">
 
     <ScrollView>
         <StackLayout
@@ -17,7 +17,13 @@
             <Entry Text="{Binding eva_planeacion_item.Revision}" x:Name="txtRevision"/>
 
             <Label Text="Actual" />
-            <Entry Text="{Binding eva_planeacion_item.Actual}" x:Name="txtActual"/>
+            <Picker SelectedItem="{Binding eva_planeacion_item.Actual}">
+                <Picker.Items>
+                    <x:String>S</x:String>
+                    <x:String>N</x:String>
+                </Picker.Items>
+            </Picker>
+            <!--<Entry Text="{Binding eva_planeacion_item.Actual}" x:Name="txtActual"/>-->
 
             <Label Text="Competencia de la asignatura"/>
             <Entry Text="{Binding eva_planeacion_item.CompetenciaAsignatura}" x:Name="txtCompetencia"/>
