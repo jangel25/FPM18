@@ -13,12 +13,21 @@ namespace AppCocacolaNayMobiV2.Services.Inventarios
     {
         private static readonly FicAsyncLock ficMutex = new FicAsyncLock();
         private SQLiteAsyncConnection ficSQLiteConnection;
+        private SQLiteConnection ficSQLiteConnection2;
 
         public FicSrvCatAlmacenList()
         {
             var ficDataBasePath = DependencyService.Get<IFicConfigSQLiteNETStd>().FicGetDatabasePath();
             ficSQLiteConnection = new SQLiteAsyncConnection(ficDataBasePath);
             FicLoMetCreateDataBaseAsync();
+        }
+
+        public List<zt_cat_almacenes> GetAll_zt_cat_almacenes()
+        {
+            var ficDataBasePath = DependencyService.Get<IFicConfigSQLiteNETStd>().FicGetDatabasePath();
+            ficSQLiteConnection2 = new SQLiteConnection(ficDataBasePath);
+            var almacenes = ficSQLiteConnection2.Table<zt_cat_almacenes>().ToList();
+            return almacenes;
         }
 
         public async void FicLoMetCreateDataBaseAsync()

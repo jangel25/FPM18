@@ -1,5 +1,8 @@
-﻿using AppCocacolaNayMobiV2.ViewModels.Inventarios;
+﻿using AppCocacolaNayMobiV2.Models.Inventarios;
+using AppCocacolaNayMobiV2.Services.Inventarios;
+using AppCocacolaNayMobiV2.ViewModels.Inventarios;
 using System;
+using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using ZXing.Net.Mobile.Forms;
@@ -11,6 +14,10 @@ namespace AppCocacolaNayMobiV2.Views.Inventarios
     {
         ZXingScannerPage scanPage;
         public String texto;
+        //variable lista del tipo zt_cat_almacenes almacenara los registros
+        List<zt_cat_almacenes> almacenes;
+        //objeto de la clase que contiene la funcion para traer la lista de la tabla
+        FicSrvCatAlmacenList ficSrvCatAlmacenList;
         private object FicLoParameter { get; set; }
 
         public FicViConteoDetInventarioItem(object ficPaParameter)
@@ -34,6 +41,16 @@ namespace AppCocacolaNayMobiV2.Views.Inventarios
 
         protected override void OnAppearing()
         {
+            //inicializar la variable 
+            ficSrvCatAlmacenList = new FicSrvCatAlmacenList();
+            //almaceno en la variable creada el resultado de la funcion para obt. la lista
+            almacenes = ficSrvCatAlmacenList.GetAll_zt_cat_almacenes();
+            //recorro la lista de almacenes
+            foreach (zt_cat_almacenes almacen in almacenes)
+            {
+                //agregar cada elemento de la lista al picker
+                pickerAlmacen.Items.Add(almacen.Almacen);
+            }
             var viewModel = BindingContext as FicVmConteoDetInventarioItem;
             if (viewModel != null) viewModel.OnAppearing(FicLoParameter);
 
