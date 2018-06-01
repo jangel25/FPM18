@@ -94,6 +94,7 @@ D:\Multiplataforma\FPM18\FPM18\Planeaciones\AppCocacolaNayMobiV2\AppCocacolaNayM
 D:\Multiplataforma\FPM18\FPM18\Planeaciones\AppCocacolaNayMobiV2\AppCocacolaNayMobiV2.Android\obj\Debug\android\assets\System.Xml.Linq.pdb
 D:\Multiplataforma\FPM18\FPM18\Planeaciones\AppCocacolaNayMobiV2\AppCocacolaNayMobiV2.Android\obj\Debug\android\assets\System.Xml.pdb
 D:\Multiplataforma\FPM18\FPM18\Planeaciones\AppCocacolaNayMobiV2\AppCocacolaNayMobiV2.Android\bin\Debug\AppCocacolaNayMobiV2.Android.dll
+D:\Multiplataforma\FPM18\FPM18\Planeaciones\AppCocacolaNayMobiV2\AppCocacolaNayMobiV2.Android\obj\Debug\linksrc\AppCocacolaNayMobiV2.pdb
 D:\Multiplataforma\FPM18\FPM18\Planeaciones\AppCocacolaNayMobiV2\AppCocacolaNayMobiV2.Android\obj\Debug\linksrc\AppCocacolaNayMobiV2.Android.dll.mdb
 D:\Multiplataforma\FPM18\FPM18\Planeaciones\AppCocacolaNayMobiV2\AppCocacolaNayMobiV2.Android\obj\Debug\linksrc\FormsViewGroup.dll.mdb
 D:\Multiplataforma\FPM18\FPM18\Planeaciones\AppCocacolaNayMobiV2\AppCocacolaNayMobiV2.Android\obj\Debug\linksrc\Xamarin.Forms.Core.dll.mdb

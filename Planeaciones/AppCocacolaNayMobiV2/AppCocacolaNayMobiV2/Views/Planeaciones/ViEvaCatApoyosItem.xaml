@@ -15,7 +15,7 @@
             <Entry Text="{Binding eva_cat_apoyos_item.DesApoyoDidactico}" x:Name="txtReferenciaNorma"/>
 
             <Label Text="Activo" />
-            <Entry Text="{Binding eva_cat_apoyos_item.Activo}" x:Name="txtRevision"/>
+            <Switch IsToggled="{Binding eva_cat_apoyos_item.Activo}"/>
 
             <Label Text="Fecha de registro"/>
             <Label x:Name="lblFecha"/>

@@ -22,9 +22,6 @@ namespace AppCocacolaNayMobiV2.Views.Planeaciones {
         private global::Xamarin.Forms.Entry txtReferenciaNorma;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.Entry txtRevision;
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Label lblFecha;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
@@ -32,7 +29,6 @@ namespace AppCocacolaNayMobiV2.Views.Planeaciones {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(ViEvaCatApoyosItem));
             lblPlaneacion = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "lblPlaneacion");
             txtReferenciaNorma = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "txtReferenciaNorma");
-            txtRevision = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "txtRevision");
             lblFecha = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "lblFecha");
         }
     }

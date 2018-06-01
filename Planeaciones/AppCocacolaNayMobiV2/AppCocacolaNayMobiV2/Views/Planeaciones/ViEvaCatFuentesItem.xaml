@@ -24,7 +24,7 @@
             <Entry Text="{Binding eva_cat_fuentes_item.DesFuenteCompleta}" x:Name="txtCompetencia"/>
 
             <Label Text="Activo" />
-            <Entry Text="{Binding eva_cat_fuentes_item.Activo}"/>
+            <Switch IsToggled="{Binding eva_cat_fuentes_item.Activo}"/>
 
             <Button Text="Guardar"  Command="{Binding SaveCommand}"/>
             <Button Text="Cancelar" Command="{Binding CancelCommand}"/>

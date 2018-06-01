@@ -12,7 +12,7 @@ namespace AppCocacolaNayMobiV2.Models.Planeaciones
             public string ReferenciaNorma { get; set; }
             [MaxLength(20)]
             public string Revision { get; set; }
-            public string Actual { get; set; }
+            public bool Actual { get; set; }
             [MaxLength(20)]
             public string CompetenciaAsignatura { get; set; }
             [MaxLength(20)]

@@ -17,12 +17,7 @@
             <Entry Text="{Binding eva_planeacion_item.Revision}" x:Name="txtRevision"/>
 
             <Label Text="Actual" />
-            <Picker SelectedItem="{Binding eva_planeacion_item.Actual}">
-                <Picker.Items>
-                    <x:String>S</x:String>
-                    <x:String>N</x:String>
-                </Picker.Items>
-            </Picker>
+            <Switch IsToggled="{Binding eva_planeacion_item.Actual}"/>
             <!--<Entry Text="{Binding eva_planeacion_item.Actual}" x:Name="txtActual"/>-->
 
             <Label Text="Competencia de la asignatura"/>
